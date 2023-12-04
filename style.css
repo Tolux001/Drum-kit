@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Root declaration*/
+:root {
+  --white: #fff;
+  --yellow: #ffc600;
+}
+body {
+  font-size: 10px;
+  background: url('./images/background.jpg') bottom center;
+  background-size: cover;
+  font-family: sans-serif;
+}
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: auto;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.keys {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.key {
+  border: .4rem solid black;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  transition: all 0.7s ease;
+  text-align: center;
+  color: var(--white);
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+}
+.test {
+  width: 8rem;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: var(--yellow);
+  box-shadow: 0 0 1rem var(--yellow);
+}
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: var(--yellow);
+}
+h1, .custom {
+  color: var(--white);
+  margin-bottom: 1rem;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  border: none;
+  border-bottom: 0.5em solid var(--yellow);
+  text-shadow: 0 0 .5rem black;
+}
+.custom  {
+  border: 0.5em solid var(--yellow);
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 5s ease;
+  display: none;
+}
+.heading--mobile {
+  display: none;
+}
+@media (max-width: 685px) {
+  .heading--desktop{
+    display: none;
+  }
+  .heading--mobile {
+    display: block;
+  }
+}
