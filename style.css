@@ -56,6 +56,7 @@ body {
   transform: scale(1.1);
   border-color: var(--yellow);
   box-shadow: 0 0 1rem var(--yellow);
+  color: var(--yellow);
 }
 kbd {
   display: block;
